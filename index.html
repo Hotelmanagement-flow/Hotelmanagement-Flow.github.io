@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hotelmanagement-Flow | AI Hotel Automation Nepal</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f7f8fb;
+      color: #172033;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f172a, #1e3a8a);
+      color: white;
+      padding: 70px 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 46px;
+      margin-bottom: 18px;
+    }
+
+    header p {
+      font-size: 20px;
+      max-width: 760px;
+      margin: 0 auto 30px;
+      color: #dbeafe;
+    }
+
+    .btn {
+      display: inline-block;
+      background: #38bdf8;
+      color: #0f172a;
+      padding: 14px 28px;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+      margin: 8px;
+    }
+
+    .btn.secondary {
+      background: transparent;
+      color: white;
+      border: 1px solid #93c5fd;
+    }
+
+    section {
+      padding: 70px 20px;
+      max-width: 1150px;
+      margin: auto;
+    }
+
+    h2 {
+      font-size: 34px;
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0f172a;
+    }
+
+    .subtitle {
+      text-align: center;
+      max-width: 760px;
+      margin: 0 auto 45px;
+      color: #475569;
+      font-size: 18px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 24px;
+    }
+
+    .card {
+      background: white;
+      padding: 28px;
+      border-radius: 16px;
+      box-shadow: 0 10px 25px rgba(15, 23, 42, 0.08);
+    }
+
+    .card h3 {
+      margin-bottom: 12px;
+      color: #1e3a8a;
+      font-size: 22px;
+    }
+
+    .card p {
+      color: #475569;
+    }
+
+    .process {
+      background: #eef6ff;
+      border-radius: 24px;
+    }
+
+    .step {
+      border-left: 4px solid #2563eb;
+      padding-left: 20px;
+      margin-bottom: 24px;
+    }
+
+    .step h3 {
+      color: #0f172a;
+      margin-bottom: 6px;
+    }
+
+    .pricing {
+      background: #0f172a;
+      color: white;
+      max-width: none;
+    }
+
+    .pricing h2,
+    .pricing .subtitle {
+      color: white;
+    }
+
+    .price-card {
+      background: #1e293b;
+      color: white;
+      padding: 30px;
+      border-radius: 18px;
+      text-align: center;
+      border: 1px solid #334155;
+    }
+
+    .price {
+      font-size: 38px;
+      font-weight: bold;
+      margin: 16px 0;
+      color: #38bdf8;
+    }
+
+    ul {
+      list-style: none;
+      margin-top: 18px;
+    }
+
+    li {
+      margin: 10px 0;
+    }
+
+    li::before {
+      content: "✓ ";
+      color: #38bdf8;
+      font-weight: bold;
+    }
+
+    .cta {
+      text-align: center;
+      background: linear-gradient(135deg, #2563eb, #0f172a);
+      color: white;
+      border-radius: 24px;
+      padding: 60px 30px;
+    }
+
+    .cta h2 {
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: #020617;
+      color: #94a3b8;
+    }
+
+    .tag {
+      display: inline-block;
+      background: #dbeafe;
+      color: #1e40af;
+      padding: 6px 12px;
+      border-radius: 999px;
+      font-size: 14px;
+      margin-bottom: 16px;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Hotelmanagement Flow</h1>
+    <p>
+      AI-powered hotel automation for small hotels and guesthouses in Nepal.
+      Move from paper, manual bookings and messy spreadsheets to a simple automated system.
+    </p>
+    <a href="#contact" class="btn">Request a Demo</a>
+    <a href="#how" class="btn secondary">How It Works</a>
+  </header>
+
+  <section>
+    <span class="tag">Built for small hotels</span>
+    <h2>Modernize Hotel Operations Without Expensive Software</h2>
+    <p class="subtitle">
+      Hotelmanagement Flow helps hotels manage bookings, guests, rooms, payments and reports using
+      Google Workspace, AI automation and simple dashboards.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Booking Automation</h3>
+        <p>Automatically extract booking details from emails and transfer them into a structured booking system.</p>
+      </div>
+      <div class="card">
+        <h3>Room Management</h3>
+        <p>Track room availability, check-ins, check-outs and potential double bookings in one clear overview.</p>
+      </div>
+      <div class="card">
+        <h3>Guest Management</h3>
+        <p>Keep guest information organized, including contact details, stay history and booking status.</p>
+      </div>
+      <div class="card">
+        <h3>Revenue Tracking</h3>
+        <p>Monitor monthly revenue, paid bookings, open payments and financial performance.</p>
+      </div>
+      <div class="card">
+        <h3>AI Quality Monitoring</h3>
+        <p>Detect missing information, unusual prices, payment issues and possible booking conflicts.</p>
+      </div>
+      <div class="card">
+        <h3>Google-Based Workflow</h3>
+        <p>Your hotel keeps ownership of Gmail, Google Sheets, Drive and Calendar. We only set up the automation layer.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="process" id="how">
+    <h2>How It Works</h2>
+    <p class="subtitle">
+      A simple workflow designed for hotels that want less paper, fewer mistakes and better daily control.
+    </p>
+
+    <div class="step">
+      <h3>1. Booking Email Arrives</h3>
+      <p>A booking confirmation or request arrives in the hotel Gmail account.</p>
+    </div>
+
+    <div class="step">
+      <h3>2. AI Extracts Booking Details</h3>
+      <p>The system reads dates, guest name, number of guests, room type, price and booking source.</p>
+    </div>
+
+    <div class="step">
+      <h3>3. Human Confirmation</h3>
+      <p>Unclear bookings are marked for review. The hotel confirms important entries before they become final.</p>
+    </div>
+
+    <div class="step">
+      <h3>4. Google Sheets Is Updated</h3>
+      <p>The booking, room status, revenue and guest overview are updated automatically.</p>
+    </div>
+
+    <div class="step">
+      <h3>5. Daily Monitoring</h3>
+      <p>The system checks for missing data, double bookings, unpaid stays and operational issues.</p>
+    </div>
+  </section>
+
+  <section>
+    <h2>Why Hotels Use It</h2>
+    <p class="subtitle">
+      The goal is not to replace hotel staff. The goal is to reduce repetitive work and avoid costly mistakes.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Less Paperwork</h3>
+        <p>Replace notebooks and scattered papers with structured digital records.</p>
+      </div>
+      <div class="card">
+        <h3>Fewer Errors</h3>
+        <p>Reduce missed bookings, wrong dates, forgotten payments and double bookings.</p>
+      </div>
+      <div class="card">
+        <h3>Better Overview</h3>
+        <p>See today’s check-ins, check-outs, room status and open payments at a glance.</p>
+      </div>
+      <div class="card">
+        <h3>Low Cost</h3>
+        <p>Start with tools the hotel already knows: Gmail, Google Sheets and Google Drive.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="pricing">
+    <h2>Simple Pricing</h2>
+    <p class="subtitle">
+      Flexible packages for small hotels, guesthouses and lodges.
+    </p>
+
+    <div class="grid">
+      <div class="price-card">
+        <h3>Starter</h3>
+        <div class="price">€10/mo</div>
+        <ul>
+          <li>Basic booking sheet</li>
+          <li>Email-to-sheet workflow</li>
+          <li>Monthly support</li>
+        </ul>
+      </div>
+
+      <div class="price-card">
+        <h3>Professional</h3>
+        <div class="price">€20/mo</div>
+        <ul>
+          <li>Room management</li>
+          <li>Revenue tracking</li>
+          <li>AI data checks</li>
+          <li>Remote support</li>
+        </ul>
+      </div>
+
+      <div class="price-card">
+        <h3>Custom</h3>
+        <div class="price">On request</div>
+        <ul>
+          <li>Hotel-specific setup</li>
+          <li>Advanced automation</li>
+          <li>Reports and dashboards</li>
+          <li>Training for staff</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Data Ownership & Privacy</h2>
+    <p class="subtitle">
+      The hotel keeps control of its own Google account and data. We provide setup, automation and technical support.
+    </p>
+
+    <div class="grid">
+      <div class="card">
+        <h3>Your Data Stays Yours</h3>
+        <p>The hotel keeps ownership of Gmail, Google Sheets, Google Drive and guest records.</p>
+      </div>
+      <div class="card">
+        <h3>Manual Review for Critical Data</h3>
+        <p>Unclear bookings, passport data, payments and sensitive information should be checked by staff.</p>
+      </div>
+      <div class="card">
+        <h3>Backup & Recovery</h3>
+        <p>Systems can be backed up and restored to reduce the risk of data loss or broken sheets.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="cta">
+      <h2>Ready to modernize your hotel operations?</h2>
+      <p>
+        Request a demo and see how your hotel can move from paper to simple AI-powered automation.
+      </p>
+      <br />
+      <a href="mailto:contact@example.com" class="btn">Contact Us</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2026 Hotelmanagement-Flow. AI hotel automation for Nepal.</p>
+  </footer>
+
+</body>
+</html>
