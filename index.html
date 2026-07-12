@@ -357,31 +357,21 @@
       padding: 24px;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
+      border-left: 4px solid var(--accent-cyan);
     }
 
-    .faq-item summary {
-      cursor: pointer;
+    .faq-item h3 {
       font-weight: bold;
       color: var(--primary-blue);
       font-size: 16px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      user-select: none;
-    }
-
-    .faq-item summary:hover {
-      color: var(--secondary-blue);
-    }
-
-    .faq-item summary::marker {
-      color: var(--accent-cyan);
+      margin-bottom: 12px;
+      margin-top: 0;
     }
 
     .faq-item p {
-      margin-top: 16px;
       color: var(--text-secondary);
       line-height: 1.7;
+      margin: 0;
     }
 
     .testimonials {
@@ -749,35 +739,35 @@
       </p>
 
       <div class="faq-grid">
-        <details class="faq-item" open>
-          <summary>What if the service stops?</summary>
+        <div class="faq-item">
+          <h3>What if the service stops?</h3>
           <p>Your data remains in your Google account. Since we only set up the automation layer, you keep full access to all your booking sheets, guest records, and historical data even if the service ends. You own the data completely.</p>
-        </details>
+        </div>
 
-        <details class="faq-item">
-          <summary>Do you have access to my guest data?</summary>
+        <div class="faq-item">
+          <h3>Do you have access to my guest data?</h3>
           <p>No. We set up the automation in your Google Workspace account, which you control. Critical data like passwords and sensitive information are reviewed by your staff before being stored.</p>
-        </details>
+        </div>
 
-        <details class="faq-item">
-          <summary>Can my staff get training?</summary>
+        <div class="faq-item">
+          <h3>Can my staff get training?</h3>
           <p>Yes. Our Professional and Custom packages include remote support and staff training. We help your team understand the system and troubleshoot common issues.</p>
-        </details>
+        </div>
 
-        <details class="faq-item">
-          <summary>What if we have special requirements?</summary>
+        <div class="faq-item">
+          <h3>What if we have special requirements?</h3>
           <p>The Custom package is designed for hotel-specific setups. We can build advanced workflows, custom dashboards, and reports tailored to your hotel's operations.</p>
-        </details>
+        </div>
 
-        <details class="faq-item">
-          <summary>Do you support multiple hotels?</summary>
+        <div class="faq-item">
+          <h3>Do you support multiple hotels?</h3>
           <p>Yes. We can set up Hotelmanagement-Flow for multiple properties. Contact us for bulk pricing and multi-hotel management features.</p>
-        </details>
+        </div>
 
-        <details class="faq-item">
-          <summary>How long does setup take?</summary>
+        <div class="faq-item">
+          <h3>How long does setup take?</h3>
           <p>Setup typically takes 2-5 days depending on your hotel's size and complexity. We guide you through Gmail configuration, sheet setup, and AI automation rules.</p>
-        </details>
+        </div>
       </div>
     </section>
 
