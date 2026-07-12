@@ -358,6 +358,13 @@
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(15, 23, 42, 0.06);
       border-left: 4px solid var(--accent-cyan);
+      cursor: pointer;
+      transition: all 0.3s ease;
+    }
+
+    .faq-item:hover {
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.12);
+      transform: translateY(-2px);
     }
 
     .faq-item h3 {
@@ -366,12 +373,35 @@
       font-size: 16px;
       margin-bottom: 12px;
       margin-top: 0;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .faq-item h3::after {
+      content: "+";
+      font-size: 24px;
+      color: var(--accent-cyan);
+      transition: transform 0.3s ease;
+    }
+
+    .faq-item.active h3::after {
+      content: "−";
+      transform: rotate(0deg);
     }
 
     .faq-item p {
       color: var(--text-secondary);
       line-height: 1.7;
       margin: 0;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease;
+    }
+
+    .faq-item.active p {
+      max-height: 500px;
+      margin-top: 12px;
     }
 
     .testimonials {
@@ -741,12 +771,12 @@
       <div class="faq-grid">
         <div class="faq-item">
           <h3>What if the service stops?</h3>
-          <p>Your data remains in your Google account. Since we only set up the automation layer, you keep full access to all your booking sheets, guest records, and historical data even if the service ends. You own the data completely.</p>
+          <p>Your data remains in your Google account. Since we only set up the automation layer, you keep full access to all your booking sheets, guest records, and historical data even if the service stops. You can export everything to CSV or continue using the sheets manually.</p>
         </div>
 
         <div class="faq-item">
           <h3>Do you have access to my guest data?</h3>
-          <p>No. We set up the automation in your Google Workspace account, which you control. Critical data like passwords and sensitive information are reviewed by your staff before being stored.</p>
+          <p>No. We set up the automation in your Google Workspace account, which you control. Critical data like passwords and sensitive information are reviewed by your staff before being stored. We never store copies of your data on external servers.</p>
         </div>
 
         <div class="faq-item">
@@ -860,6 +890,31 @@
   <footer role="contentinfo">
     <p>© 2026 Hotelmanagement-Flow. AI hotel automation for Nepal.</p>
   </footer>
+
+  <script>
+    // FAQ Toggle Functionality
+    document.querySelectorAll('.faq-item').forEach(item => {
+      item.addEventListener('click', function() {
+        // Close other items
+        document.querySelectorAll('.faq-item').forEach(otherItem => {
+          if (otherItem !== this) {
+            otherItem.classList.remove('active');
+          }
+        });
+        
+        // Toggle current item
+        this.classList.toggle('active');
+      });
+
+      // Allow keyboard navigation (Enter/Space)
+      item.addEventListener('keypress', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          this.click();
+        }
+      });
+    });
+  </script>
 
 </body>
 </html>
